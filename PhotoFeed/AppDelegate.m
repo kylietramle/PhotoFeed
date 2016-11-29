@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "FeedViewController.h"
+#import "FavoritesViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,15 +19,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // create 2 views controllers
-    UIViewController *feedViewController = [[UIViewController alloc] init];
-    feedViewController.title = @"Feed";
-    feedViewController.tabBarItem.image = [UIImage imageNamed:@"list.png"];
-    UIViewController *favoritesViewController = [[UIViewController alloc] init];
-    favoritesViewController.title = @"Favorites";
-    favoritesViewController.tabBarItem.image = [UIImage imageNamed:@"star.png"];
-    
-    feedViewController.view.backgroundColor = [UIColor blueColor];
-    favoritesViewController.view.backgroundColor = [UIColor redColor];
+    FeedViewController *feedViewController = [[FeedViewController alloc] init];
+    FavoritesViewController *favoritesViewController = [[FavoritesViewController alloc] init];
     
     // tab bar controller
     UITabBarController *tabBarController = [[UITabBarController alloc] init];

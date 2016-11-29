@@ -13,6 +13,8 @@
 		619BEE421DEE2CA400C3BB49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 619BEE401DEE2CA400C3BB49 /* Main.storyboard */; };
 		619BEE441DEE2CA400C3BB49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 619BEE431DEE2CA400C3BB49 /* Assets.xcassets */; };
 		619BEE471DEE2CA400C3BB49 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 619BEE451DEE2CA400C3BB49 /* LaunchScreen.storyboard */; };
+		619BEE501DEE47A600C3BB49 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 619BEE4F1DEE47A600C3BB49 /* FeedViewController.m */; };
+		619BEE531DEE4A1300C3BB49 /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 619BEE521DEE4A1300C3BB49 /* FavoritesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		619BEE431DEE2CA400C3BB49 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		619BEE461DEE2CA400C3BB49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		619BEE481DEE2CA400C3BB49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		619BEE4E1DEE47A600C3BB49 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
+		619BEE4F1DEE47A600C3BB49 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
+		619BEE511DEE4A1300C3BB49 /* FavoritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesViewController.h; sourceTree = "<group>"; };
+		619BEE521DEE4A1300C3BB49 /* FavoritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +73,10 @@
 				619BEE451DEE2CA400C3BB49 /* LaunchScreen.storyboard */,
 				619BEE481DEE2CA400C3BB49 /* Info.plist */,
 				619BEE371DEE2CA400C3BB49 /* Supporting Files */,
+				619BEE4E1DEE47A600C3BB49 /* FeedViewController.h */,
+				619BEE4F1DEE47A600C3BB49 /* FeedViewController.m */,
+				619BEE511DEE4A1300C3BB49 /* FavoritesViewController.h */,
+				619BEE521DEE4A1300C3BB49 /* FavoritesViewController.m */,
 			);
 			path = PhotoFeed;
 			sourceTree = "<group>";
@@ -150,8 +160,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				619BEE531DEE4A1300C3BB49 /* FavoritesViewController.m in Sources */,
 				619BEE3F1DEE2CA400C3BB49 /* ViewController.m in Sources */,
 				619BEE3C1DEE2CA400C3BB49 /* AppDelegate.m in Sources */,
+				619BEE501DEE47A600C3BB49 /* FeedViewController.m in Sources */,
 				619BEE391DEE2CA400C3BB49 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
