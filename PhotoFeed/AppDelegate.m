@@ -19,8 +19,10 @@
     // create 2 views controllers
     UIViewController *feedViewController = [[UIViewController alloc] init];
     feedViewController.title = @"Feed";
+    feedViewController.tabBarItem.image = [UIImage imageNamed:@"list.png"];
     UIViewController *favoritesViewController = [[UIViewController alloc] init];
     favoritesViewController.title = @"Favorites";
+    favoritesViewController.tabBarItem.image = [UIImage imageNamed:@"star.png"];
     
     feedViewController.view.backgroundColor = [UIColor blueColor];
     favoritesViewController.view.backgroundColor = [UIColor redColor];
