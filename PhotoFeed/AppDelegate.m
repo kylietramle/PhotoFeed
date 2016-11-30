@@ -23,16 +23,17 @@
     FeedViewController *feedViewController = [[FeedViewController alloc] init];
     FavoritesViewController *favoritesViewController = [[FavoritesViewController alloc] init];
     ProfileViewController *profileViewController = [[ProfileViewController alloc] init];
-    
-    // tab bar controller
-    UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    
-    // add view controllers to tab bar
-    [tabBarController setViewControllers:@[feedViewController, favoritesViewController, profileViewController]];
+    UINavigationController *navController = [[[UINavigationController alloc] init] initWithRootViewController:feedViewController];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = tabBarController;
+    self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];
+    
+    // tab bar controller
+    //    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    // add view controllers to tab bar
+    //    [tabBarController setViewControllers:@[feedViewController, favoritesViewController, profileViewController]];
+    //    self.window.rootViewController = tabBarController;
     
     return YES;
 }

@@ -7,6 +7,7 @@
 //
 
 #import "FeedViewController.h"
+#import "FavoritesViewController.h"
 
 @interface FeedViewController ()
 
@@ -28,6 +29,19 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor blueColor];
     
+    UIButton *favoritesButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    favoritesButton.frame = CGRectMake(60, 100, 200, 44);
+    [favoritesButton setTitle:@"View Favorites" forState:UIControlStateNormal];
+    [self.view addSubview:favoritesButton];
+    // when push, button calls showFavorites method
+    [favoritesButton addTarget:self action:@selector(showFavorites:) forControlEvents:UIControlEventTouchUpInside];
+    
+}
+
+- (void)showFavorites:(UIButton *) sender
+{
+    FavoritesViewController *favoritesViewController = [[FavoritesViewController alloc] init]; // init favorites controller
+    [self.navigationController pushViewController:favoritesViewController animated:YES]; // feedcontroller is wrapped in nav controller, so push favorites controller onto stack
 }
 
 - (void)didReceiveMemoryWarning {
