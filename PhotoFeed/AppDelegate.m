@@ -21,19 +21,23 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // create 3 views controllers
     FeedViewController *feedViewController = [[FeedViewController alloc] init];
-    FavoritesViewController *favoritesViewController = [[FavoritesViewController alloc] init];
+//    FavoritesViewController *favoritesViewController = [[FavoritesViewController alloc] init];
     ProfileViewController *profileViewController = [[ProfileViewController alloc] init];
-    UINavigationController *navController = [[[UINavigationController alloc] init] initWithRootViewController:feedViewController];
+    
+    // feed nav controller
+    UINavigationController *feedNavController = [[UINavigationController alloc] initWithRootViewController:feedViewController];
+    
+   // profile nav controller
+    UINavigationController *profileNavController = [[[UINavigationController alloc] init] initWithRootViewController:profileViewController];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = navController;
     [self.window makeKeyAndVisible];
     
-    // tab bar controller
-    //    UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    // add view controllers to tab bar
-    //    [tabBarController setViewControllers:@[feedViewController, favoritesViewController, profileViewController]];
-    //    self.window.rootViewController = tabBarController;
+    
+    // add nav view controller to tab bar
+    self.tabBarController = [[UITabBarController alloc] init];
+    self.tabBarController.viewControllers = @[profileNavController, feedNavController];
+    self.window.rootViewController = self.tabBarController;
     
     return YES;
 }
